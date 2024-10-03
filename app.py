@@ -20,3 +20,8 @@ canvas_result = st_canvas(
     width=200,
     key="canvas",
 )
+
+st.sidebar.title("Acerca de:")
+st.sidebar.text("En este tablero puedes")
+st.sidebar.text("dibujar cualquier cosa") 
+st.sidebar.text("y la app la adivinará")
