@@ -1,29 +1,36 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-st.title('Tablero para dibujar')
+st.sidebar.title("Acerca de:")
+st.sidebar.write("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto.")
 
-# Add canvas component
-# Specify canvas parameters in application
-drawing_mode = "freedraw"
-stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 15)
-stroke_color = '#FFFFFF'  # Set line color to white
-bg_color = '#000000'
+# Sidebar components
+stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
+drawing_mode = st.sidebar.selectbox("Herramienta de dibujo:", ["freedraw", "line", "rect", "circle", "transform"])
 
-# Create a canvas component
+# Main interface
+st.write("### Color de Trazo")
+
+stroke_color = st.color_picker("Escoge el color", "#000000")
+
+# Create canvas
 canvas_result = st_canvas(
-    fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
     stroke_width=stroke_width,
     stroke_color=stroke_color,
-    background_color=bg_color,
+    background_color="#FFFFFF",  # Background color white
+    update_streamlit=True,
     height=200,
     width=200,
+    drawing_mode=drawing_mode,
     key="canvas",
 )
 
-# Sidebar content
-st.sidebar.title("Acerca de:")
-st.sidebar.text("En este tablero puedes")
-st.sidebar.text("dibujar cualquier cosa")
-st.sidebar.text("y la app la adivinará")
+# Input and button for image analysis
+clave = st.text_input("Ingresa tu Clave")
+if st.button("Analiza la imagen"):
+    if clave:
+        st.write(f"La clave ingresada es: {clave}")
+        st.write("La imagen ha sido procesada.")
 
+# Example message for analyzed image
+st.write("La imagen muestra el número \"4\" dibujado a mano, con líneas simples y un estilo informal.")
