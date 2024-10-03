@@ -16,17 +16,20 @@ drawing_mode = st.sidebar.selectbox("Herramienta de dibujo:", ["freedraw", "line
 st.write("### Color de Trazo")
 stroke_color = st.color_picker("Escoge el color", "#000000")
 
-# Crear el lienzo más grande (600x600)
+# Crear el lienzo más grande (800x800)
 canvas_result = st_canvas(
     stroke_width=stroke_width,
     stroke_color=stroke_color,
     background_color="#FFFFFF",  # Fondo blanco
     update_streamlit=True,
-    height=600,  # Altura del lienzo
-    width=600,   # Ancho del lienzo
+    height=800,  # Altura del lienzo
+    width=800,   # Ancho del lienzo
     drawing_mode=drawing_mode,
     key="canvas",
 )
 
-# Mensaje después del análisis
-st.write("Cuando termines de dibujar, la aplicación interpretará tu imagen.")
+# Botón para analizar la imagen
+if st.button("Analiza la imagen"):
+    st.write("La imagen ha sido procesada.")
+    # Aquí podrías añadir más lógica para analizar la imagen si es necesario
+
