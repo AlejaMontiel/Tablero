@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
+st.title('Tablero para pintar')
 
 st.sidebar.title("Acerca de:")
 st.sidebar.write("En este tablero puede dibujar cualquier cosa y nuestra app adivinará qué es")
