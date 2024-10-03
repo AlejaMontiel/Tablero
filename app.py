@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
 st.sidebar.title("Acerca de:")
-st.sidebar.write("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto.")
+st.sidebar.write("En este tablero puede dibujar cualquier cosa y nuestra app adivinará qué es")
 
 # Sidebar components
 stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
