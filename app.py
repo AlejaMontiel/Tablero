@@ -24,10 +24,4 @@ canvas_result = st_canvas(
     drawing_mode=drawing_mode,
     key="canvas",
 )
-
-# Input and button for image analysis
-clave = st.text_input("Ingresa tu Clave")
-if st.button("Analiza la imagen"):
-    if clave:
-        st.write(f"La clave ingresada es: {clave}")
-        st.write("La imagen ha sido procesada.")
+   
