@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
 st.sidebar.title("Acerca de:")
-st.sidebar.write("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto.")
+st.sidebar.write("En esta tablero puedes dibujar cualquier cosa y la app adiviará qué es")
 
 # Sidebar components
 stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
@@ -31,6 +31,3 @@ if st.button("Analiza la imagen"):
     if clave:
         st.write(f"La clave ingresada es: {clave}")
         st.write("La imagen ha sido procesada.")
-
-# Example message for analyzed image
-st.write("La imagen muestra el número \"4\" dibujado a mano, con líneas simples y un estilo informal.")
