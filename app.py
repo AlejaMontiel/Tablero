@@ -6,7 +6,7 @@ st.title('🎨 Tablero de Dibujo Inteligente')
 
 # Añadir una breve descripción bajo el título
 st.markdown("""
-### ¡Bienvenido al tablero donde tu creatividad se puede desplegar. 😎✨
+### ¡Bienvenido al tablero donde tu creatividad se puede desplegar! 😎✨
 """)
 
 # Configurar la barra lateral con colores y una estructura organizada
