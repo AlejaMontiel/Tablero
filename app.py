@@ -32,6 +32,3 @@ if st.button("Analiza la imagen"):
         st.write(f"La clave ingresada es: {clave}")
         st.write("La imagen ha sido procesada.")
 
-# Example message for analyzed image
-st.write("La imagen muestra el número \"4\" dibujado a mano, con líneas simples y un estilo informal.")
-
