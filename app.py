@@ -48,4 +48,4 @@ st.markdown("""
         background-color: #FFEDCC;
     }
 </style>
-""", unsafe_allow_html=True)7
+""", unsafe_allow_html=True)
